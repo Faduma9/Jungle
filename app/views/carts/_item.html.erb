@@ -7,8 +7,10 @@
     <br>
     <p><%= product.description %></p>
   </td>
+  <%= humanized_money_with_symbol product.price %>
+
   <td>
-    <%= product.price %>
+    
   </td>
   <td>
     <div>
@@ -18,6 +20,6 @@
     </div>
   </td>
   <td>
-    <%= product.price * quantity %>
+  <%= humanized_money_with_symbol(product.price * quantity) %>
   </td>
 </tr>
