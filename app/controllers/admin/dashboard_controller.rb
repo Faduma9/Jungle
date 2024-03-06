@@ -1,12 +1,12 @@
 class Admin::DashboardController < ApplicationController
   before_action :authenticate
 
- 
   def show
     @products_count = Product.count
     @categories_count = Category.count
   end
-  Private
+
+  private
 
   def authenticate
     authenticate_or_request_with_http_basic do |username, password|
